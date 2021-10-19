@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container mb-5">
         <h2 class="text-center mt-5 mb-5">Submit php form data using javascript without page refresh</h2>
 
         <span id="message"></span>
@@ -17,23 +17,23 @@
                 <div class="card-header">Sample Form</div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Name <span class="text-danger"></span></label>
+                        <label>Name <span class="text-danger">*</span></label>
                         <input type="text" name="name" id="name" class="form-control form_data" />
                     </div>                    
                     <div class="form-group">
-                        <label>Email <span class="text-danger"></span></label>
+                        <label>Email <span class="text-danger">*</span></label>
                         <input type="text" name="email" id="email" class="form-control form_data" />
                     </div>
                     <div class="form-group">
-                        <label>Website <span class="text-danger"></span></label>
+                        <label>Website <span class="text-danger">*</span></label>
                         <input type="text" name="website" id="website" class="form-control form_data" />
                     </div>
                     <div class="form-group">
-                        <label>Comment <span class="text-danger"></span></label>
-                        <textarea name="comment" id="comment" cols="40" rows="5"></textarea>
+                        <label>Comment <span class="text-danger">*</span></label>
+                        <textarea name="comment" id="comment" cols="40" rows="5" class="form-control form_data"></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Gender <span class="text-danger"></span></label>
+                        <label>Gender <span class="text-danger">*</span></label>
                         <select name="gender" id="gender" class="form-control form_data">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
