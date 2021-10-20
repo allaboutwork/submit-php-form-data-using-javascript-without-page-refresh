@@ -1,9 +1,8 @@
 <?php 
-
-    if (isset($POST["name"])) {
+    if (isset($_POST["name"])) {
         
-        $connect = new PDO("myql:host=localhost; dbname=testing", "root", "");
-
+        $connect = new PDO("mysql:host=localhost; dbname=testing", "root", "");
+        
         $data = array(
             ':name'         =>  $_POST["name"],
             ':email'        =>  $_POST["email"],
@@ -12,14 +11,20 @@
             ':gender'       =>  $_POST["gender"]
         );
 
-        $query = " INSERT INTO data_sample
-                (name, email, webiste, comment, gender) 
-                VALUES (:name, :email, :website, :comment, :gender)";
+        $query = " 
+        INSERT INTO data_sample 
+        (name, email, website, comment, gender) 
+        VALUES (:name, :email, :website, :comment, :gender)
+        ";
 
-        $statement = $connect -> prepare($query);
+        $statement = $connect->prepare($query);
 
-        $statement -> execute($data);
+        $statement->execute($data);
 
         echo '<div class="alert alert-success">Data Saved</div>';
     }
+    else{
+        echo '<div class="alert alert-danger">No connection to database</div>';
+    }
+
 ?>
