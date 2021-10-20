@@ -6,4 +6,4 @@
 4. We are using AJAX here.
 5. free to use software.
 6. effort has been made to make the program bug free but no gurantee is made.
-7. php version 7.3.0
+7. made with php version 7.3.0
