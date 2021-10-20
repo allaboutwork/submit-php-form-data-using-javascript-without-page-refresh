@@ -57,7 +57,7 @@
         var form_data = new FormData();
     
         for (var count = 0; count < form_element.length; count++) {
-            form_data.append(form_element[count].name, form_element[value].value);        
+            form_data.append(form_element[count].name, form_element[count].value);        
         }
     
         document.getElementById('submit').disabled = true;
@@ -83,7 +83,7 @@
                 {
                     
                     document.getElementById('message').innerHTML = '';
-                }, 2000);
+                }, 5000);
             }
         }
     }
